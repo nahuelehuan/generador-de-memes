@@ -1,0 +1,327 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+/* estilos generales */
+
+body{
+    height: 100 vh;
+    margin: 0;
+    background-color: aquamarine;
+}
+body.light-theme {
+    --color-header: #e0e0e0;
+    --color-background: #eeeeee;
+    --color-panel: #fafafa;
+    --color-boton-default: #e0e0e0;
+    --color-boton-default-hover: #bdbdbd;
+    --color-text: #424242;
+    --color-title-panel: rgb(33 33 33 / 80%);
+    --color-title-control: rgb(33 33 33 / 70%);
+    --font-primary: 'Open Sans', sans-serif;
+    --border-radius: 3px;
+}
+
+body.dark-theme {
+    --color-header: #191e2b;
+    --color-background: #30343f;
+    --color-panel: #252935;
+    --color-boton-default: #393e49;
+    --color-boton-default-hover: #4e5565;
+    --color-text: #ffffff;
+    --font-primary: 'Open Sans', sans-serif;
+    --border-radius: 3px;
+}
+
+
+
+
+label{
+    color: black;
+}
+
+/* BOTONES */
+
+.btn {
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    border-radius: var(--border-radius);
+    transition: background-color 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+
+/* TÍTULO */
+/* estilos h1 */
+
+.header-title{
+    font-family: 'Bangers', cursive;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+
+.bright-mode{
+    background-color: #E0E0E0;
+    color: #424242;
+}
+
+.dark-mode{
+    background-color: #191E2B;
+    color: #FFFFFF;
+}
+
+
+/* CANVAS IMAGEN */
+
+.meme-container{
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+}
+
+.meme-txt-container{
+    position: static;
+}
+.meme-txt{
+
+    font-family: Impact;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    position: static;
+    padding: 22px 50px;
+    margin:0;
+    font-size: 54px;
+    width: 100%;
+    text-align: center;
+    font-weight: 800;
+
+
+
+}
+
+#top-text{
+    top:0;
+}
+
+#bottom-text{
+    bottom: 0;
+}
+.img{
+    width: 100%;
+   flex-grow: 1;
+   background-size: cover;
+}
+
+
+/* botones */
+.btn-default-styles i{
+    height: 36px;
+    text-align: center;
+    padding: 0 10px;
+    border-radius: 20px;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.download-btn{
+    margin-top: 35px;
+    color: white;
+    background-color: #1f8b40;
+
+}
+
+
+
+
+/* ASIDE -  SIDEBAR */
+
+.sidebar{
+    width: 17%;
+    height: 100%;
+    position:fixed;
+    right: 0;
+    overflow: auto;
+    z-index: 10000;
+}
+
+.secondary-tittle{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+
+}
+
+.third-tittle{
+    font-family: 'Bangers', cursive;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 15px;
+}
+
+
+/* BOTÓN CIERRE SIDEBAR */
+
+.toggle-btn{
+
+   /* outline: 0;
+   position: relative;
+   top: 0;
+   right:-10; */
+}
+/* botón cierre aside */
+.close{
+    color: #000;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+
+}
+/* color picker */
+.color-wrapper{
+    position: relative;
+    padding: 5px;  
+    height: 3rem;    
+
+}
+/* VER!!!! */
+.img-color-span{
+   
+    /* position: absolute; 
+    bottom: 10px; 
+    right: 10px; */
+    font-family: inherit;
+    font-weight: bolder;   
+    
+    position: absolute;
+    left: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+
+
+
+.color-choice
+/* transition: background-color 0.2s;
+margin-bottom: 5px;
+border: transparent; */
+
+input[type='color'],
+input[type='color']::-webkit-color-swatch-wrapper,
+input[type='color']::-webkit-color-swatch{
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  border-radius: 50%;
+  border: 0 black;
+  margin: 0;
+  padding: 0;
+  margin: auto;
+
+}
+
+
+/* filtros select */
+.filter-options label{
+    color:#000;
+}
+
+
+.txt-color-span{
+   
+    font-family: inherit;
+    font-weight: bolder;     
+    position: absolute;
+    right: 10px;
+    top: 110%;
+    transform: translateY(-100%);
+    font-size: 14px;
+    
+}
+
+
+/* .transparent-wrapper{
+    padding: 25px;
+   
+   
+} */
+
+
+.hide{
+    display: none;
+}
+/* Botones alineación texto */
+.sm-align-btn{
+    margin: 0;
+    width: calc(100% / 3 - 10px / 3);
+   min-width: 0;
+   padding: none;
+}
+
+.i-align{
+margin:auto;
+
+}
+.alt{
+    width: 100%;
+}
+
+select, textarea {
+    border: 0;  
+    background-color: grey;
+    
+    outline: 0;
+}
+
+input[type="color" i] {
+     background-color: grey;
+     position:absolute;
+     top: 25px;
+     appearance: auto;
+}
+    /* appearance: auto;
+    
+   
+    cursor: default;
+  
+   
+    border-width: 1px;
+    border-style: solid;
+
+    border-image: initial;
+    padding: 1px 2px; */
+
+/* .color-wrapper, .transparent-wrapper {
+    position: relative;
+    height: auto;
+   
+} */
+.transparent{
+    background-color: transparent;
+}
