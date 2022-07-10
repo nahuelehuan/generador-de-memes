@@ -146,6 +146,21 @@ fSize.onkeyup = ()=>{
 
 // Fuentes - Alineación texto
 
-// const alignLeft = document.getElementById('left-align');
-// const alignCenter = document.getElementById('align-center');
-// const alignRight = document.getElementById('right-align');
+const alignLeft = document.getElementById('left-align');
+const alignCenter = document.getElementById('align-center');
+const alignRight = document.getElementById('right-align');
+
+alignLeft.addEventListener('click', () => {
+  memeTopText.style.textAlign = 'left'
+  memeBottomText.style.textAlign = 'left'
+})
+
+alignCenter.addEventListener('click', () => {
+  memeTopText.style.textAlign = 'center'
+  memeBottomText.style.textAlign = 'center'
+})
+
+alignRight.addEventListener('click', () => {
+  memeTopText.style.textAlign = 'right'
+  memeBottomText.style.textAlign = 'right'
+})
