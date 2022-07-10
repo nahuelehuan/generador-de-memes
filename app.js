@@ -133,7 +133,7 @@ fontsOptions.addEventListener('change', ()=>{
 
 // Fuentes - Selección font-size
 
-const fSize = document.getElementById('font-size');
+const fSize = document.getElementById('font-size'); //Tre etiqueta select con todas las options
 
 fSize.addEventListener('change', ()=>{
   memeTopText.style.fontSize = `${fSize.value}px`
@@ -146,9 +146,9 @@ fSize.onkeyup = ()=>{
 
 // Fuentes - Alineación texto
 
-const alignLeft = document.getElementById('left-align');
-const alignCenter = document.getElementById('align-center');
-const alignRight = document.getElementById('right-align');
+const alignLeft = document.getElementById('left-align'); //Botón align left
+const alignCenter = document.getElementById('align-center'); //Botón align center
+const alignRight = document.getElementById('right-align'); //Botón align right
 
 alignLeft.addEventListener('click', () => {
   memeTopText.style.textAlign = 'left'
@@ -163,4 +163,25 @@ alignCenter.addEventListener('click', () => {
 alignRight.addEventListener('click', () => {
   memeTopText.style.textAlign = 'right'
   memeBottomText.style.textAlign = 'right'
+})
+
+// Botones borde texto
+
+const noBorder = document.getElementById('no-outline-btn'); //Botón NINGUNO
+const lightBorder = document.getElementById('jedi-outline-btn'); //Botón CLARO
+const darkBorder = document.getElementById('sith-outline-btn'); //Botón OSCURO
+
+noBorder.addEventListener('click', ()=>{
+  memeTopText.style.webkitTextStroke  = 'transparent'
+  memeBottomText.style.webkitTextStroke  = 'transparent'
+})
+
+lightBorder.addEventListener('click', ()=>{
+  memeTopText.style.webkitTextStroke = '1px white';
+  memeBottomText.style.webkitTextStroke = '1px white';
+})
+
+darkBorder.addEventListener('click', ()=>{
+  memeTopText.style.webkitTextStroke = '2px black';
+  memeBottomText.style.webkitTextStroke = '2px black';
 })
