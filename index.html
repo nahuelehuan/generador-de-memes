@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador de Memes</title>
 
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <!-- Goole Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@300;600&family=Bangers&family=Open+Sans:wght@300;500;700&family=Oswald:wght@300;500&family=Titan+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <!-- Materialize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!-- Boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body class="jedi-mode">
     <!-- CONTENEDOR PRINCIPAL FLUID -->
 <div class="container-fluid">
 <div class="row">
@@ -29,22 +31,21 @@
 
                 <h1 class="header-title">Generador de Memes</h1>
 
-                <div class=" col-4 align items center" style="background-color: blue;">         
+                <div class="row justify justify-content-center center" style="background-color: lightskyblue;">         
     <!-- BOTONES HEADER -->
-                        <a class="waves-effect waves-light btn btn-default-styles header-btn "><i class="material-icons left">image</i>Imágen</a>
+                        <a class="waves-effect waves-light btn header-btn col-1 "><i class="material-icons left">image</i>Imágen</a>
               
-                        <a class="waves-effect waves-light btn btn-default-styles"><i class="material-icons left col-s4">keyboard</i>Texto</a>
+                        <a id="txt-btn" class="waves-effect waves-light btn  col-1 "><i class="material-icons left col-s4">keyboard</i>Texto</a>
                                 
-                        <a class="waves-effect waves-light btn btn-default-styles bright-mode"><i class="material-icons left">lightbulb_outline</i>Modo Claro</a>
+                        <a class="waves-effect waves-light btn  hidden col-2 "><i class="material-icons left">lightbulb_outline</i>Modo Claro</a>               
+                          
+                        
+                        <a class="waves-effect waves-light btn header-btn col-2"><i class="material-icons left">lightbulb_outline</i>Modo Oscuro</a> 
                 </div>
-                               
-<!-- 
-                <a class="waves-effect waves-light btn header-btn dark-mode "><i class="material-icons left">lightbulb_outline</i>Modo Oscuro</a> VER CLASES PARA TOOGLE-->
-            
             </div>
         </header>
 
-        <!-- TERMINA HEADER -->
+            <!--  TERMINA HEADER -->
    
 <!-- MAIN -->
 
@@ -74,20 +75,20 @@
 
 
 <!-- ASIDE FILTROS IMÁGEN -->
-<aside id="" class="sidebar" style="background-color: pink;">
-       
-        <!-- <div class="row justify-content-end">
-            <div class="toggle-btn col-1  ">
-                <a class="close" href="#">X</a>
+<aside id="aside" class="sidebar" style="background-color: pink;">
+      
+        <div class="row justify-content-end hidden">
+            <div class="x-btn-container col-1  ">
+                <a id="" class="close" href="#">X</a>
             </div>
-        </div> -->
-<!-- 
+        </div> 
 
 
 
-       <div class="row">
+
+       <div class="row ">
                
-            <section class="img-filter-section">
+            <section class="img-filter-section hidden">
                 <h2 class="secondary-tittle">IMÁGEN</h2>
                 <div>
                     <h3 class="third-tittle">URL</h3>
@@ -129,7 +130,7 @@
                     </div>
 
 
-Filtros para la imágen
+<!-- Filtros para la imágen -->
                     <div class="filter-options">
                         <h3 class="third-tittle">FILTROS</h3>
                         <div >
@@ -173,21 +174,20 @@ Filtros para la imágen
 
 
                 </div>
-                            Refresh Button
+                            <!-- Refresh Button -->
                 <a class="waves-effect waves-light btn btn-default-styles">Reestablecer Filtros</a>
 
           
             </section>
-        </div> -->
+        </div> 
 
-
-<!-- TEXT ASIDE (COMENTADO HASTA NUEVO AVISO) -->
+<!-- TEXT ASIDE  -->
   
-    <section class="txt-style-section">
+    <section id="txtSidebar" class="txt-style-section">
                
-        <div class="row justify-content-end">
-            <div class="toggle-btn col-1  ">
-                <a class="close" href="#">X</a>
+        <div id="txtAside" class=" x-btn-container d-flex justify-content-end">
+            <div class=" col-1  ">
+                <a id="close-txt-sidebar" class="close" href="#">X</a>
             </div>
         </div>
 
@@ -204,7 +204,7 @@ Filtros para la imágen
                 <form action="#">
                     <p>
                         <label>
-                            <input type="checkbox"/>
+                            <input id="top-txt-non" type="checkbox"/>
                             <span>Sin Texto Superior</span>
                         </label>
                     </p>
@@ -219,14 +219,16 @@ Filtros para la imágen
             
             <div>
                        <!-- checkbox -->
-                <form action="">                    
+                <form  action="#">                    
      
-                    <p>
-                        <label>
-                        <input type="checkbox"/>
+                    <p >
+                        <label >
+                        <input id="bottom-txt-non" class="yellow" type="checkbox"/>
                         <span>Sin Texto Inferior</span>
                         </label>
                     </p>
+
+            
                 </form>
             </div>
 
@@ -239,15 +241,15 @@ Filtros para la imágen
 
                     <!-- Font Family -->
 
-                <select class="browser-default">
+                <select id="fonts" class="browser-default">
                                
-                    <option value="Arial">Arial</option>
-                    <option value="Arial Black">Arial Black</option>
-                    <option value="American Typewriter">American Typewriter</option>
-                    <option value="Comic Sans MS">Comic Sans MS</option>
-                    <option value="Helvetica">Helvetica</option>
-                    <option value="Impact">Impact</option>
-                    <option value="Verdana">Verdana</option>
+                    <option id="arial" value="Arial">Arial</option>
+                    <option id="arima" value="Arima">Arima</option>
+                    <option id="titan-one" value="Titan One">Titan One</option>
+                    <option id="open-sans" value="Open Sans">Open Sans</option>
+                    <option id="helvetica" value="Helvetica">Helvetica</option>
+                    <option id="impact" value="Impact">Impact</option>
+                    <option id="verdana" value="Verdana">Verdana</option>
 
                 </select>
 
@@ -255,18 +257,20 @@ Filtros para la imágen
 
                             <!-- Font Size -->
                     <div class="col-6">
-                    <input type="number" name="Font Size" aria-label="Tamaño de fuente" class="" id="" min="9" value="40">
+                    <input type="number" name="Font Size" aria-label="Tamaño de fuente" class="" id="font-size" min="12
+                    " value="40">
                     </div>
 
                             <!-- Text Align -->
 
-                    <div class="txt-align-container col-6">
-                       
-                        <a class="waves-effect waves-light btn btn-default-styles sm-align-btn"><i class="material-icons left i-align">format_align_left</i></a>
+                    <div class="txt-align-container col">
+                       <div class="row">
+                        <a id="left-align" class="waves-effect waves-light btn  sm-align-btn col-4"><i class="material-icons left i-align">format_align_left</i></a>
                    
-                        <a class="waves-effect waves-light btn btn-default-styles sm-align-btn"><i class="material-icons left">format_align_center</i></a>
+                        <a id="align-center" class="waves-effect waves-light btn sm-align-btn col-4""><i class="material-icons left">format_align_center</i></a>
                   
-                        <a class="waves-effect waves-light btn btn-default-styles sm-align-btn"><i class="material-icons left">format_align_right</i></a>
+                        <a id="right-align" class="waves-effect waves-light btn sm-align-btn col-4""><i class="material-icons left">format_align_right</i></a>
+                        </div>
                     </div>
                   
                 </div>
@@ -314,10 +318,10 @@ Filtros para la imágen
 
                 <div>
                     <h3 class="third-tittle">CONTORNO</h3>
-                    <div>
-                        <a class="waves-effect waves-light btn btn-default-styles">Ninguno</a>
-                        <a class="waves-effect waves-light btn btn-default-styles">Claro</a>
-                        <a class="waves-effect waves-light btn btn-default-styles">Oscuro</a>
+                    <div class="row">
+                        <a class="waves-effect waves-light btn col-4">Ninguno</a>
+                        <a class="waves-effect waves-light btn col-4">Claro</a>
+                        <a class="waves-effect waves-light btn col-4">Oscuro</a>
                     </div>
                 </div>
 
@@ -354,7 +358,17 @@ Filtros para la imágen
   
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 <!-- JavaScript Bundle with Popper -->
+
+
+<!-- Descarga Meme JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+
+<!-- Boostrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- Custom JS -->
 <script src="./app.js"></script>
 </div>
 <!-- cierra div row de prueba para ubicar aside -->

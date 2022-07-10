@@ -8,7 +8,7 @@
 
 const memeTopText = document.getElementById('top-txt-meme'); //texto superior del canvas etiqueta p
 const topTxtArea = document.getElementById('top-text-area'); //textarea ingreso texto superior
-const memeBottomText = document.getElementById('bottom-txt-meme');// texto inferior del canvas
+const memeBottomText = document.getElementById('bottom-txt-meme');// texto inferior del canvas etiqueta p
 const bottomTxtArea = document.getElementById('bottom-text-area'); //textarea ingreso texto inferior
 
 topTxtArea.addEventListener('input', ()=>{
@@ -73,3 +73,79 @@ transparentBackground.addEventListener('click', ()=>{
 
 
 // FALTA HACER QUE EL COLOR DEL TEXTO ESCRITO CAMBIE EN EL CANVAS
+
+
+// Botón de cierre para sidebar texto
+
+const btnCloseTxtSidebar = document.getElementById("close-txt-sidebar"); //trae botón X de sidebar texto
+const aside = document.getElementById("aside"); //todo el aside
+
+btnCloseTxtSidebar.addEventListener('click', ()=>{
+ 
+  aside.classList.add("hidden");
+ 
+})
+
+// Botón TEXTO (Abre aside)
+
+const txtButton = document.getElementById("txt-btn"); //Botón TEXTO del header
+
+txtButton.addEventListener('click', ()=>{
+  aside.classList.remove("hidden");
+})
+
+//checkbox "sin texto sup"
+
+const noTopText = document.getElementById('top-txt-non'); //input "sin texto superior"
+
+noTopText.addEventListener('click', ()=>{
+  memeTopText.classList.toggle("hidden")
+  
+})
+
+//checkbox "sin texto sup"
+const noBottomText = document.getElementById('bottom-txt-non'); //input "sin texto inferior"
+noBottomText.addEventListener('click', ()=>{
+  memeBottomText.classList.toggle("hidden")
+})
+
+// Fuentes - Selección font-family
+
+const fontsOptions = document.getElementById('fonts');
+// let arial = document.getElementById('arial');
+// let arima =  document.getElementById('arima');
+// let titan = document.getElementById('titan-one');
+// let openSans = document.getElementById('open-sans');
+// let hevetica = document.getElementById('helvetica');
+// let impact = document.getElementById('impact');
+// let verdana = document.getElementById('verdana');
+
+// const fonts = () => {
+//   memeTopText.style.fontFamily = `${fontFamily.value}`
+ 
+// };
+
+fontsOptions.addEventListener('change', ()=>{
+  memeTopText.style.fontFamily = `${fontsOptions.value}`
+  memeBottomText.style.fontFamily = `${fontsOptions.value}`
+})
+
+
+// Fuentes - Selección font-size
+
+const fSize = document.getElementById('font-size');
+
+fSize.addEventListener('change', ()=>{
+  memeTopText.style.fontSize = `${fSize.value}px`
+  memeBottomText.style.fontSize = `${fSize.value}px`
+})
+fSize.onkeyup = ()=>{
+  memeTopText.style.fontSize = `${fSize.value}px`
+  memeBottomText.style.fontSize = `${fSize.value}px`
+}
+
+// Fuentes - Alineación texto
+
+// const alignLeft = document.getElementById('left-align');
+// const alignCenter = document.getElementById('align-center');
+// const alignRight = document.getElementById('right-align');

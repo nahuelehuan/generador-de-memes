@@ -10,9 +10,9 @@ body{
     margin: 0;
     background-color: aquamarine;
 }
-body.light-theme {
+body.jedi-mode {
     --color-header: #e0e0e0;
-    --color-background: #eeeeee;
+    /* --color-background: #eeeeee;
     --color-panel: #fafafa;
     --color-boton-default: #e0e0e0;
     --color-boton-default-hover: #bdbdbd;
@@ -20,18 +20,18 @@ body.light-theme {
     --color-title-panel: rgb(33 33 33 / 80%);
     --color-title-control: rgb(33 33 33 / 70%);
     --font-primary: 'Open Sans', sans-serif;
-    --border-radius: 3px;
+    --border-radius: 3px; */
 }
 
-body.dark-theme {
+body.sith-mode {
     --color-header: #191e2b;
-    --color-background: #30343f;
+    /* --color-background: #30343f;
     --color-panel: #252935;
     --color-boton-default: #393e49;
     --color-boton-default-hover: #4e5565;
     --color-text: #ffffff;
     --font-primary: 'Open Sans', sans-serif;
-    --border-radius: 3px;
+    --border-radius: 3px; */
 }
 
 
@@ -61,6 +61,7 @@ label{
 /* TÍTULO */
 /* estilos h1 */
 
+
 .header-title{
     font-family: 'Bangers', cursive;
     font-size: 60px;
@@ -72,7 +73,7 @@ label{
 
 
 
-.bright-mode{
+/* .bright-mode{
     background-color: #E0E0E0;
     color: #424242;
 }
@@ -80,7 +81,7 @@ label{
 .dark-mode{
     background-color: #191E2B;
     color: #FFFFFF;
-}
+} */
 
 
 /* CANVAS IMAGEN */
@@ -102,7 +103,7 @@ label{
 }
 .meme-txt{
 
-    font-family: Impact;
+    font-family: Arial;
     color: rgb(0, 0, 0);
     background-color: rgb(255, 255, 255);
     position: static;
@@ -132,15 +133,16 @@ label{
 
 
 /* botones */
-.btn-default-styles i{
+/* .btn-default-styles {
     height: 36px;
     text-align: center;
     padding: 0 10px;
+    border: 1px solid transparent;
     border-radius: 20px;
     transition: background-color 0.2s;
     font-size: 14px;
     cursor: pointer;
-}
+} */
 
 .download-btn{
     margin-top: 35px;
@@ -185,12 +187,11 @@ label{
 
 /* BOTÓN CIERRE SIDEBAR */
 
-.toggle-btn{
+.x-btn-container{
 
-   /* outline: 0;
+   outline: 0;
    position: relative;
-   top: 0;
-   right:-10; */
+   
 }
 /* botón cierre aside */
 .close{
@@ -273,7 +274,7 @@ input[type='color']::-webkit-color-swatch{
 } */
 
 
-.hide{
+.hidden{
     display: none;
 }
 /* Botones alineación texto */
@@ -325,3 +326,5 @@ input[type="color" i] {
 .transparent{
     background-color: transparent;
 }
+
+
