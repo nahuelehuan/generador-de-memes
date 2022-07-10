@@ -146,24 +146,15 @@ fSize.onkeyup = ()=>{
 
 // Fuentes - Alineación texto
 
-const alignLeft = document.getElementById('left-align'); //Botón align left
-const alignCenter = document.getElementById('align-center'); //Botón align center
-const alignRight = document.getElementById('right-align'); //Botón align right
+const waveschildren = document.getElementById('waves').children
 
-alignLeft.addEventListener('click', () => {
-  memeTopText.style.textAlign = 'left'
-  memeBottomText.style.textAlign = 'left'
-})
-
-alignCenter.addEventListener('click', () => {
-  memeTopText.style.textAlign = 'center'
-  memeBottomText.style.textAlign = 'center'
-})
-
-alignRight.addEventListener('click', () => {
-  memeTopText.style.textAlign = 'right'
-  memeBottomText.style.textAlign = 'right'
-})
+for (let i = 0; i <= waveschildren.length -1; i++) {
+  waveschildren[i].addEventListener('click',()=>{
+    memeTopText.style.textAlign = waves.children[i].id;
+    memeBottomText.style.textAlign = waves.children[i].id;
+  }
+  )
+}
 
 // Botones borde texto
 
