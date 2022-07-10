@@ -148,10 +148,10 @@ fSize.onkeyup = ()=>{
 
 const waveschildren = document.getElementById('waves').children
 
-for (let i = 0; i <= waveschildren.length -1; i++) {
-  waveschildren[i].addEventListener('click',()=>{
-    memeTopText.style.textAlign = waves.children[i].id;
-    memeBottomText.style.textAlign = waves.children[i].id;
+for (let i = 0; i <= wavesc.length -1; i++) {
+  wavesc[i].addEventListener('click',()=>{
+    memeTopText.style.textAlign = wavesc[i].id;
+    memeBottomText.style.textAlign = wavesc[i].id;
   }
   )
 }
